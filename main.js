@@ -1,7 +1,14 @@
-const DOMSelectors = {
-  button: document.getElementById("btn"),
-  box: document.getElementById("container-box"),
-  input: document.querySelector(`#input`),
-};
+const insert = document.querySelector("#insert");
+insert.addEventListener("click", () => {
+  const subject = document.querySelector("#subject");
+  const positionSelect = document.querySelector("#position");
+  subject.insertAdjacentHTML(
+    positionSelect.value,
+    "<strong>inserted text</strong>"
+  );
+});
 
-DOMSelectors.box.insertAdjacentHTML("beforebegin");
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => {
+  document.location.reload();
+});
