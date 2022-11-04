@@ -1,7 +1,9 @@
 const DOMSelectors = {
-  Album: document.getElementById("text"),
-  Artist: document.getElementById("text"),
-  Picture: doucument.getElementById("#input"),
+  Album: document.getElementById("album"),
+  Artist: document.getElementById("artist"),
+  Picture: document.getElementById("picture"),
+  Button: document.getElementById("btn"),
+  Reset: document.getElementById("reset"),
 };
 
-function
+console.log(container.Reset);
