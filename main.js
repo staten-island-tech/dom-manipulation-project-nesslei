@@ -9,8 +9,6 @@ const DOMSelectors = {
 DOMSelectors.Button.addEventListener("click", function () {
   let input = DomSelectorsinput.value;
 
-  console.log(input);
-
   DOMSelectors.Container.insertAdjacentHTML(
     "beforeend",
     `
@@ -21,4 +19,5 @@ DOMSelectors.Button.addEventListener("click", function () {
   );
 });
 
+console.log;(${Album} ${Artist} ${Picture})
 DOMSelectors.container.insertAdjacentHTML;
