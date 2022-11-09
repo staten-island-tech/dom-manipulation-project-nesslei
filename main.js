@@ -1,13 +1,12 @@
 const DOMSelectors = {
   Container: document.getElementById("container"),
+  form: document.getElementById("form"), 
   Album: document.getElementById("album"),
   Artist: document.getElementById("artist"),
   Picture: document.getElementById("picture"),
   Button: document.getElementById("btn"),
 };
-
-DOMSelectors.Button.addEventListener("click", function () {
-  let input = DomSelectorsinput.value;
+DOMSelectors.form.addEventListener(`submit`, function (event) => {
 
   DOMSelectors.Container.insertAdjacentHTML(
     "beforeend",
@@ -18,6 +17,8 @@ DOMSelectors.Button.addEventListener("click", function () {
     `
   );
 });
+
+DOMSelectors.style.display 
 
 console.log;(${Album} ${Artist} ${Picture})
 DOMSelectors.container.insertAdjacentHTML;
