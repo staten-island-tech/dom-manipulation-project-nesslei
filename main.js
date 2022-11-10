@@ -6,17 +6,16 @@ const DOMSelectors = {
   Picture: document.getElementById("picture"),
   Button: document.getElementById("btn"),
 };
-DOMSelectors.form.addEventListener(`submit`, function (event) => {
+DOMSelectors.addEventListener("form"). addEventListener(`submit`, function),  
+  let form = {},  
+  form = document.getElementById("album"); 
+  form = document.getElementById("album"); 
+  form = document.getElementById("album"); 
+  form = document.getElementById("album"); 
 
-  DOMSelectors.Container.insertAdjacentHTML(
-    "beforeend",
-    `
-      <p class ='album'> ${Album} </p>
-      <p class ='artist'> ${Artist} </p>
-      <p class ='picture'> ${Picture} </p>
-    `
-  );
-});
+
+  )};
+
 
 DOMSelectors.style.display 
 
