@@ -1,23 +1,39 @@
 const DOMSelectors = {
-  Container: document.getElementById("container"),
+  container: document.querySelectorAll("#container"),
   form: document.getElementById("form"), 
-  Album: document.getElementById("album"),
-  Artist: document.getElementById("artist"),
-  Picture: document.getElementById("picture"),
-  Button: document.getElementById("btn"),
 };
-DOMSelectors.addEventListener("form"). addEventListener(`submit`, function),  
-  let form = {},  
-  form = document.getElementById("album"); 
-  form = document.getElementById("album"); 
-  form = document.getElementById("album"); 
-  form = document.getElementById("album"); 
+  //to hold the information input 
+DOMSelectors.form.addEventListener("submit", function (preventRefresh) {
+  preventRefresh.preventDefault(); 
+  //declare the varaible to contain the stuff 
+  let box = {}; 
 
+  box.name= document.getElementById("album"); 
+  box.artist = document.getElementById("artist"); 
+  box.picture = document.getElementById("picture"); 
+  console.log(box); 
 
-  )};
+  //Let JavaScript make changes to HTML
+DOMSelectors.container.insertAdjacentHTML(
+  "afterend", 
+  ` 
+  <div class="card">
+  <img class="title" src=${box.Album}/> 
+  <p class="name" src=${box.artist}/> 
+  <p class="name" src=${box.picture}/> 
+  </div> 
+  `
+); 
 
+//remove button 
 
-DOMSelectors.style.display 
+let remove = document.querySelectorAll("#remove"); 
+remove.forEach((button) => {
+  button.addEventListener("click", function (remove){
+    remove.parentEelemt.remove(); 
 
-console.log;(${Album} ${Artist} ${Picture})
-DOMSelectors.container.insertAdjacentHTML;
+  });
+
+});
+
+});
