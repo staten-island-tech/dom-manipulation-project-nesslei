@@ -1,39 +1,41 @@
+//an object called “DOMSelectors” to hold your DOM Selectors
 const DOMSelectors = {
-  container: document.querySelectorAll("#container"),
-  form: document.getElementById("form"), 
+  container: document.querySelectorId("#container"),
+  form: document.getElementById("form"),
 };
-  //to hold the information input 
+//function that creates an object and calls the following functions
 DOMSelectors.form.addEventListener("submit", function (preventRefresh) {
-  preventRefresh.preventDefault(); 
-  //declare the varaible to contain the stuff 
-  let box = {}; 
+  preventRefresh.preventDefault();
+  let box = {};
 
-  box.name= document.getElementById("album"); 
   box.artist = document.getElementById("artist"); 
   box.picture = document.getElementById("picture"); 
   console.log(box); 
 
-  //Let JavaScript make changes to HTML
-DOMSelectors.container.insertAdjacentHTML(
-  "afterend", 
-  ` 
+  //function that injects the newly created object into the document object model
+  DOMSelectors.container.insertAdjacentHTML(
+    "afterend",
+    ` 
   <div class="card">
   <img class="title" src=${box.Album}/> 
   <p class="name" src=${box.artist}/> 
   <p class="name" src=${box.picture}/> 
   </div> 
   `
-); 
+  );
 
-//remove button 
-
-let remove = document.querySelectorAll("#remove"); 
-remove.forEach((button) => {
-  button.addEventListener("click", function (remove){
-    remove.parentEelemt.remove(); 
-
+  //a function that clears the input fields after injecting the object
+  DOMSelectors.foreach((container) => {
+    DOMSelectors.name = "";
+    DOMSelectors.artist = "";
+    DOMSelectors.pictre = "";
   });
 
-});
-
+  //function to remove an object after they have been created
+  let remove = document.querySelectorAll("#remove");
+  remove.forEach((button) => {
+    button.addEventListener("click", function (remove) {
+      remove.parentEelemt.remove();
+    });
+  });
 });
