@@ -1,12 +1,6 @@
-#container-box{
-    background-color: white;
-    
+#container{
+    background-color: black;
     font-size: 2vh;
     color: black;
     text-align: center;
-    
-}
-
-.cat-poster{
-    width: 10rem;
 }
