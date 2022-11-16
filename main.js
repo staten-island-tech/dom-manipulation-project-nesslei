@@ -1,10 +1,10 @@
 //object called “DOMSelectors” to hold your DOM Selectors
 const DOMSelectors = {
-  container: document.querySelecto(`#container`),
+  container: document.querySelectorAll(`#container`),
   form: document.getElementById("form"),
 };
 //function that creates an object and calls the following functions
-DOMSelectors.form.addEventListener("submit", function (preventRefresh) {
+DOMSelectors.form.addEventListener("submit", function () {
   preventRefresh.preventDefault();
   let box = {};
   box.name = document.getElementById("name");
@@ -26,7 +26,9 @@ DOMSelectors.form.addEventListener("submit", function (preventRefresh) {
   );
 
   //a function that clears the input fields after injecting the object
-  document.getElementById("name", "artist", "picture").value = "";
+  document.getElementById("name").value = "";
+  document.getElementById("artist").value = "";
+  document.getElementById("picture").value = "";
 
   //function to remove an object after they have been created
   let remove = document.querySelectorAll("#remove");
@@ -35,6 +37,5 @@ DOMSelectors.form.addEventListener("submit", function (preventRefresh) {
       remove.parentEelemt.remove();
     });
   });
+  console.log(box);
 });
-
-form();
