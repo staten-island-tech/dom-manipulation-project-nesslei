@@ -3,31 +3,25 @@ const DOMSelectors = {
   container: document.querySelectorAll(`#container`),
   form: document.getElementById("form"),
 };
-<<<<<<< Updated upstream
-//function that creates an object and calls the following functions
+
+//function that creates an object  VYDFTVHDWMABCJYDUVJYATVYCJNQBYVAUGBFUCBK somebody 
+
 DOMSelectors.form.addEventListener("submit", function () {
   preventRefresh.preventDefault();
-  let box = {};
-  box.name = document.getElementById("name");
-  box.artist = document.getElementById("artist");
-  box.picture = document.getElementById("picture");
-  console.log(box);
-=======
-  //to hold the information input //prevent refresh to hold info
-DOMSelectors.form.addEventListener("submit", function (preventRefresh) {
-  preventRefresh.preventDefault(); 
-  //declare where the stuff goes and what 
-  let box = {}; 
->>>>>>> Stashed changes
+  let bruh = {};
+  bruh.Name = document.getElementById("Name");
+  bruh.Artist = document.getElementById("Artist");
+  bruh.Picture = document.getElementById("Picture");
+  console.log(bruh);
 
-  //function that injects the newly created object into the document object model
+  //function that injects the newly created object into the document object model i tried to scream but my head was underwater 
   DOMSelectors.container.insertAdjacentHTML(
     "afterend",
     ` 
   <div class="card">
-  <img class="title" src=${box.name}/> 
-  <p class="name"> ${box.artist}/> 
-  <p class="name"> ${box.picture}/> 
+  <img class="title" src=${bruh.name}/> 
+  <p class="name"> ${bruh.artist}/> 
+  <p class="name"> ${bruh.picture}/> 
   <button class="remove"> remove </button>
   </div> 
   `
@@ -45,5 +39,5 @@ DOMSelectors.form.addEventListener("submit", function (preventRefresh) {
       remove.parentEelemt.remove();
     });
   });
-  console.log(box);
+  console.log(bruh);
 });
