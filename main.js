@@ -3,6 +3,7 @@ const DOMSelectors = {
   container: document.querySelectorAll(`#container`),
   form: document.getElementById("form"),
 };
+<<<<<<< Updated upstream
 //function that creates an object and calls the following functions
 DOMSelectors.form.addEventListener("submit", function () {
   preventRefresh.preventDefault();
@@ -11,6 +12,13 @@ DOMSelectors.form.addEventListener("submit", function () {
   box.artist = document.getElementById("artist");
   box.picture = document.getElementById("picture");
   console.log(box);
+=======
+  //to hold the information input //prevent refresh to hold info
+DOMSelectors.form.addEventListener("submit", function (preventRefresh) {
+  preventRefresh.preventDefault(); 
+  //declare where the stuff goes and what 
+  let box = {}; 
+>>>>>>> Stashed changes
 
   //function that injects the newly created object into the document object model
   DOMSelectors.container.insertAdjacentHTML(
