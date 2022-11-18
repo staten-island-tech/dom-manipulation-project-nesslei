@@ -4,9 +4,9 @@ const DOMSelectors = {
   form: document.getElementById("form"),
 };
 
-//function that creates an object  VYDFTVHDWMABCJYDUVJYATVYCJNQBYVAUGBFUCBK somebody 
+//function that creates an object  VYDFTVHDWMABCJYDUVJYATVYCJNQBYVAUGBFUCBK somebody
 
-DOMSelectors.form.addEventListener("submit", function () {
+DOMSelectors.form.addEventListener("submit", function (preventRefresh) {
   preventRefresh.preventDefault();
   let bruh = {};
   bruh.Name = document.getElementById("Name");
@@ -14,17 +14,19 @@ DOMSelectors.form.addEventListener("submit", function () {
   bruh.Picture = document.getElementById("Picture");
   console.log(bruh);
 
-  //function that injects the newly created object into the document object model i tried to scream but my head was underwater 
+  //function that injects the newly created object into the document object model i tried to scream but my head was underwater
   DOMSelectors.container.insertAdjacentHTML(
     "afterend",
-    ` 
-  <div class="card">
-  <img class="title" src=${bruh.name}/> 
-  <p class="name"> ${bruh.artist}/> 
-  <p class="name"> ${bruh.picture}/> 
-  <button class="remove"> remove </button>
-  </div> 
-  `
+    html);
+    `
+      <div class="card">
+        <img class="title" src=${bruh.name}/>
+        <p class="name">${bruh.artist}/></p>
+        <p class="name">${bruh.picture}/>
+          <button class="remove">remove</button>
+        </p>
+      </div> 
+      `
   );
 
   //a function that clears the input fields after injecting the object
