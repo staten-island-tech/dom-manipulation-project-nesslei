@@ -4,7 +4,7 @@ const DOMSelectors = {
   form: document.getElementById("form"),
 };
 
-//function that creates an object  VYDFTVHDWMABCJYDUVJYATVYCJNQBYVAUGBFUCBK somebody 
+//function that creates an object  VYDFTVHDWMABCJYDUVJYATVYCJNQBYVAUGBFUCBK somebody
 
 DOMSelectors.form.addEventListener("submit", function (preventRefresh) {
   preventRefresh.preventDefault();
@@ -12,9 +12,9 @@ DOMSelectors.form.addEventListener("submit", function (preventRefresh) {
   bruh.Name = document.getElementById("Name").value;
   bruh.Artist = document.getElementById("Artist").value;
   bruh.Picture = document.getElementById("Picture").value;
-  console.log(bruh);  
+  console.log(bruh);
 
-  //function that injects the newly created object into the document object model i tried to scream but my head was underwater 
+  //function that injects the newly created object into the document object model i tried to scream but my head was underwater
   DOMSelectors.container.insertAdjacentHTML(
     "afterend",
     ` 
@@ -32,9 +32,14 @@ DOMSelectors.form.addEventListener("submit", function (preventRefresh) {
   document.getElementById("Artist").value = "";
   document.getElementById("Picture").value = "";
 
-  //function to remove an object after they have been created
-    function myFunction() {
-      const element = document.getElementById("container");
-      element.remove();
-    }
-}); 
+  //what to remove
+  let remove = document.querySelectorAll("#remove");
+  //array
+  remove.forEach((button) => {
+    //Event listener
+    button.addEventListener("click", function (event) {
+      event.target.parentElement.remove();
+      console.log(event.target);
+    });
+  });
+});
