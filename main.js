@@ -1,45 +1,40 @@
 //object called “DOMSelectors” to hold your DOM Selectors
 const DOMSelectors = {
-  container: document.querySelectorAll(`#container`),
+  container: document.getElementById("container"),
   form: document.getElementById("form"),
 };
 
-//function that creates an object  VYDFTVHDWMABCJYDUVJYATVYCJNQBYVAUGBFUCBK somebody
+//function that creates an object  VYDFTVHDWMABCJYDUVJYATVYCJNQBYVAUGBFUCBK somebody 
 
 DOMSelectors.form.addEventListener("submit", function (preventRefresh) {
   preventRefresh.preventDefault();
   let bruh = {};
-  bruh.Name = document.getElementById("Name");
-  bruh.Artist = document.getElementById("Artist");
-  bruh.Picture = document.getElementById("Picture");
-  console.log(bruh);
+  bruh.Name = document.getElementById("Name").value;
+  bruh.Artist = document.getElementById("Artist").value;
+  bruh.Picture = document.getElementById("Picture").value;
+  console.log(bruh);  
 
-  //function that injects the newly created object into the document object model i tried to scream but my head was underwater
+  //function that injects the newly created object into the document object model i tried to scream but my head was underwater 
   DOMSelectors.container.insertAdjacentHTML(
     "afterend",
-    html);
-    `
-      <div class="card">
-        <img class="title" src=${bruh.name}/>
-        <p class="name">${bruh.artist}/></p>
-        <p class="name">${bruh.picture}/>
-          <button class="remove">remove</button>
-        </p>
-      </div> 
-      `
+    ` 
+  <div class="container" id="output">
+  <img class="picture" id="cardpicture" src=${bruh.Picture}/>
+  <p class="artist" id="cardartist" > ${bruh.Artist}</p> 
+  <p class="name" id="cardname" > ${bruh.Name} </p> 
+  <button id="remove" class="Remove" > remove </button>
+  </div> 
+  `
   );
 
   //a function that clears the input fields after injecting the object
-  document.getElementById("name").value = "";
-  document.getElementById("artist").value = "";
-  document.getElementById("picture").value = "";
+  document.getElementById("Name").value = "";
+  document.getElementById("Artist").value = "";
+  document.getElementById("Picture").value = "";
 
   //function to remove an object after they have been created
-  let remove = document.querySelectorAll("#remove");
-  remove.forEach((button) => {
-    button.addEventListener("click", function (remove) {
-      remove.parentEelemt.remove();
-    });
-  });
-  console.log(bruh);
-});
+    function myFunction() {
+      const element = document.getElementById("container");
+      element.remove();
+    }
+}); 
