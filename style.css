@@ -9,6 +9,7 @@ body,
 .button {
     margin: 2vw;
     color: rgb(0, 94, 255); 
+    text-align: center;
 }
 
 .container {
@@ -22,13 +23,15 @@ body,
     box-shadow: .5em .5em 1em;
     align-items: center;
     justify-content: space-around;
+    text-align: center;
 }
 
 h1 {
     font-size: 2rem;
-    margin-left: 7rem; 
+    margin-left: 25vw; 
     width: 50%;
     padding: 10px;
+    text-align: center;
   }
 
   .inputs { 
@@ -38,10 +41,12 @@ h1 {
     height: 8vw;
     border-radius: 10px;
     margin: 8vw; 
+    margin-left: 35vw;
     background-color: #ffffff;
     box-shadow: .5em .5em 1em;
     align-items: center;
     justify-content: space-around;
+    text-align: center;
 }
 
 .img {
@@ -54,6 +59,7 @@ h1 {
     color: #ffffff;
     text-align: center;
     font-size-adjust: .5; 
+    margin-left: 40vw; 
 }
 
 
